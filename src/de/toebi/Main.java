@@ -18,7 +18,7 @@ public class Main {
         socke.setPreis(2);
 
         Kleidung dreierPackSocken = new Kleidung();
-        socke.setPreis(7.99);
+        dreierPackSocken.setPreis(7.99);
 
 
 
