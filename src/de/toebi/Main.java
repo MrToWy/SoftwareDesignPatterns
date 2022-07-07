@@ -1,25 +1,19 @@
 package de.toebi;
 
-import de.toebi.ObserverPattern.Dealer;
-import de.toebi.ObserverPattern.Share;
+import de.toebi.StrategiePattern.Bellverhalten;
+import de.toebi.StrategiePattern.Dog;
+import de.toebi.StrategiePattern.LeisesBellen;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Share google = new Share();
-        google.setAttributes("googl", 2000);
+        Dog wolfgang = new Dog();
+        Bellverhalten wolfgangBellt = new LeisesBellen();
 
-        Share apple = new Share();
-        apple.setAttributes("appl", 750);
-
-        Dealer dealer = new Dealer();
-        dealer.newShare(google);
-        dealer.newShare(apple);
+        wolfgang.setBellverhalten(wolfgangBellt);
 
 
-
-        apple.setAttributes("appl", 850);
-        apple.setAttributes("appl", 800);
+        wolfgang.getBellverhalten().bellen();
     }
 }
